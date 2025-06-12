@@ -78,7 +78,7 @@ jobs:
 
          mkdir -p results
 
-         robot --output results/output.xml --log results/log.html --report results/report.html tests/
+         robot -v BROWSER:chrome --variable HEADLESS:True JuneRobotFrameworkEG/Test/
  
     - name: Upload Robot Framework Report
 
