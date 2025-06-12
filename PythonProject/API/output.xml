@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.4 on win32)" generated="2025-06-12T11:19:06.535031" rpa="false" schemaversion="5">
+<suite id="s1" name="Delete" source="C:\Users\dsara\PycharmProjects\PythonProject\API\Delete.robot">
+<test id="s1-t1" name="DELETE request Example" line="10">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-06-12T11:19:07.324716" level="INFO">Creating Session using : alias=baseURI, url=https://reqres.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<arg>baseURI</arg>
+<arg>${BASE_URL}</arg>
+<arg>verify=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-06-12T11:19:07.324229" elapsed="0.000876"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-06-12T11:19:07.326671" level="INFO">&amp;{headers} = { content-type=application/json }</msg>
+<var>&amp;{headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-06-12T11:19:07.326022" elapsed="0.000711"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-06-12T11:19:07.327745" level="INFO">&amp;{headers} = { x-api-key=reqres-free-v1 }</msg>
+<var>&amp;{headers}</var>
+<arg>x-api-key=reqres-free-v1</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-06-12T11:19:07.327241" elapsed="0.000569"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-06-12T11:19:07.966803" level="INFO">DELETE Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-06-12T11:19:07.967375" level="INFO">DELETE Response : url=https://reqres.in/api/users/2 
+ status=401, reason=Unauthorized 
+ headers={'Date': 'Thu, 12 Jun 2025 05:49:08 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '72', 'Connection': 'keep-alive', 'Cf-Ray': '94e7102f6f36c46e-BLR', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1749707348&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=XAXq6ueNeWrGEoEvBkmN6xW5C8TFJvtJo%2FosRYzCRT0%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1749707348&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=XAXq6ueNeWrGEoEvBkmN6xW5C8TFJvtJo%2FosRYzCRT0%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Limit': '100', 'Ratelimit-Remaining': '82', 'Ratelimit-Reset': '9', 'Etag': 'W/"48-+Z5A4MsbyryWjwqUCtZ7548heDc"', 'Via': '1.1 vegur', 'Cf-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=37376&amp;min_rtt=37348&amp;rtt_var=10520&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2834&amp;recv_bytes=792&amp;delivery_rate=77484&amp;cwnd=247&amp;unsent_bytes=0&amp;cid=5b0243d099a8ae9b&amp;ts=429&amp;x=0"'} 
+ body={"error":"Missing API key.","how_to_get_one":"https://reqres.in/signup"} 
+ </msg>
+<msg time="2025-06-12T11:19:07.967720" level="FAIL">HTTPError: 401 Client Error: Unauthorized for url: https://reqres.in/api/users/2</msg>
+<var>${response}</var>
+<arg>baseURI</arg>
+<arg>${servicename}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-06-12T11:19:07.328274" elapsed="0.644266">HTTPError: 401 Client Error: Unauthorized for url: https://reqres.in/api/users/2</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-12T11:19:07.973009" elapsed="0.000658"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-06-12T11:19:07.974007" elapsed="0.000045"/>
+</kw>
+<status status="FAIL" start="2025-06-12T11:19:07.322977" elapsed="0.651574">HTTPError: 401 Client Error: Unauthorized for url: https://reqres.in/api/users/2</status>
+</test>
+<status status="FAIL" start="2025-06-12T11:19:06.540495" elapsed="1.435678"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Delete" id="s1" pass="0" fail="1" skip="0">Delete</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.4 on win32)" generated="2025-06-12T12:36:40.683732" rpa="false" schemaversion="5">
+<suite id="s1" name="DeleteDemo" source="C:\Users\dsara\PycharmProjects\PythonProject\API\VideoDB\DeleteDemo.robot">
+<test id="s1-t1" name="Post request Example" line="29">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-06-12T12:36:41.281743" level="INFO">Creating Session using : alias=base_url, url=https://videogamedb.uk:443/2, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>base_url</arg>
+<arg>${BASE_URL}/${id}</arg>
+<arg>verify=False</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-06-12T12:36:41.281002" elapsed="0.001443"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-06-12T12:36:42.049737" level="INFO">DELETE Request : url=https://videogamedb.uk:443/2/api/v2/videogame/%7Bid%7D (redirected) 
+ path_url=/2/api/v2/videogame/%7Bid%7D 
+ headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'content-type': 'application/json', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-06-12T12:36:42.050036" level="INFO">GET Response : url=https://videogamedb.uk/swagger-ui/index.html 
+ status=200, reason= 
+ headers={'vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'last-modified': 'Thu, 03 Apr 2025 10:38:34 GMT', 'accept-ranges': 'bytes', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'cache-control': 'no-cache, no-store, max-age=0, must-revalidate', 'pragma': 'no-cache', 'expires': '0', 'x-frame-options': 'DENY', 'content-type': 'text/html', 'content-encoding': 'gzip', 'date': 'Thu, 12 Jun 2025 07:06:41 GMT', 'transfer-encoding': 'chunked', 'server': 'Fly/3e8bebaf (2025-06-05)', 'via': '1.1 fly.io, 1.1 fly.io', 'fly-request-id': '01JXHFCQMCZ7JEAAH3023GW02A-bom'} 
+ body=&lt;!-- HTML for static distribution bundle build --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Swagger UI&lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css" href="./springfox.css?v=3.0.4" &gt;
+  &lt;link rel="stylesheet" type="text/css" href="./swagger-ui.css?v=3.0.4" &gt;
+  &lt;link rel="stylesheet" type="text/css" href="./tb-swagger-ui.min.css?v=3.0.4" &gt;
+  &lt;link rel="icon" type="image/png" href="./favicon-32x32.png?v=3.0.4" sizes="32x32" /&gt;
+  &lt;link rel="icon" type="image/png" href="./favicon-16x16.png?v=3.0.4" sizes="16x16" /&gt;
+  &lt;style&gt;
+    html
+    {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin:0;
+      background: #fafafa;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0"&gt;
+  &lt;defs&gt;
+    &lt;symbol viewBox="0 0 20 20" id="unlocked"&gt;
+      &lt;path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"&gt;&lt;/path&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="locked"&gt;
+      &lt;path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="close"&gt;
+      &lt;path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="large-arrow"&gt;
+      &lt;path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 20 20" id="large-arrow-down"&gt;
+      &lt;path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"/&gt;
+    &lt;/symbol&gt;
+
+
+    &lt;symbol viewBox="0 0 24 24" id="jump-to"&gt;
+      &lt;path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"/&gt;
+    &lt;/symbol&gt;
+
+    &lt;symbol viewBox="0 0 24 24" id="expand"&gt;
+      &lt;path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/&gt;
+    &lt;/symbol&gt;
+
+  &lt;/defs&gt;
+&lt;/svg&gt;
+
+&lt;div id="swagger-ui"&gt;&lt;/div&gt;
+
+&lt;script src="./swagger-ui-bundle.js?v=3.0.4"&gt; &lt;/script&gt;
+&lt;script src="./swagger-ui-standalone-preset.js?v=3.0.4"&gt; &lt;/script&gt;
+&lt;script src="./springfox.js?v=3.0.4"&gt; &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+ 
+ </msg>
+<msg time="2025-06-12T12:36:42.050280" level="INFO">C:\Users\dsara\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'videogamedb.uk'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\dsara\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'videogamedb.uk'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-06-12T12:36:42.053715" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>base_url</arg>
+<arg>${servicename}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-06-12T12:36:41.283181" elapsed="0.770700"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-12T12:36:42.058019" level="INFO">&lt;Response [200]&gt;</msg>
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-12T12:36:42.057641" elapsed="0.000472"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-12T12:36:42.062402" level="INFO">200</msg>
+<arg>${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-12T12:36:42.061478" elapsed="0.001016"/>
+</kw>
+<status status="PASS" start="2025-06-12T12:36:41.279597" elapsed="0.784223"/>
+</test>
+<status status="PASS" start="2025-06-12T12:36:40.687780" elapsed="1.377492"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="DeleteDemo" id="s1" pass="1" fail="0" skip="0">DeleteDemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

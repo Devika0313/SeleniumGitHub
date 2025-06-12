@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.4 on win32)" generated="2025-06-09T14:56:56.899617" rpa="false" schemaversion="5">
+<suite id="s1" name="SetupAtSuitelevel" source="C:\Users\dsara\PycharmProjects\PythonProject\TestSuite\SetupAtSuitelevel.robot">
+<kw name="Open db connections" owner="Resource" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-09T14:56:56.968369" level="INFO">Open the db connections</msg>
+<arg>Open the db connections</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-09T14:56:56.967991" elapsed="0.000516"/>
+</kw>
+<status status="PASS" start="2025-06-09T14:56:56.967194" elapsed="0.001482"/>
+</kw>
+<test id="s1-t1" name="Testcase1" line="7">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-09T14:56:56.969578" level="INFO">Execute testcase1</msg>
+<arg>Execute testcase1</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-09T14:56:56.969396" elapsed="0.000260"/>
+</kw>
+<status status="PASS" start="2025-06-09T14:56:56.968778" elapsed="0.001233"/>
+</test>
+<test id="s1-t2" name="Testcase2" line="11">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-09T14:56:56.972724" level="INFO">Execute testcase2</msg>
+<arg>Execute testcase2</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-09T14:56:56.972554" elapsed="0.000249"/>
+</kw>
+<status status="PASS" start="2025-06-09T14:56:56.971898" elapsed="0.001203"/>
+</test>
+<test id="s1-t3" name="Testcase3" line="17">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-09T14:56:56.974902" level="INFO">Execute testcase3</msg>
+<arg>Execute testcase3</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-09T14:56:56.974742" elapsed="0.000218"/>
+</kw>
+<status status="PASS" start="2025-06-09T14:56:56.974325" elapsed="0.000882"/>
+</test>
+<kw name="Close the browser" owner="Resource" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-09T14:56:56.977372" level="INFO">Closing the browser</msg>
+<arg>Closing the browser</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-09T14:56:56.977222" elapsed="0.000217"/>
+</kw>
+<status status="PASS" start="2025-06-09T14:56:56.976947" elapsed="0.000574"/>
+</kw>
+<status status="PASS" start="2025-06-09T14:56:56.906422" elapsed="0.071133"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SetupAtSuitelevel" id="s1" pass="3" fail="0" skip="0">SetupAtSuitelevel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
