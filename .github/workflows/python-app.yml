@@ -70,25 +70,35 @@ jobs:
 
         sudo chmod +x /usr/local/bin/chromedriver
  
-    - name: Run Robot Framework tests
+    # - name: Run Robot Framework tests
 
-      run: |
+    #   run: |
 
-        robot -v BROWSER:chrome --variable HEADLESS:True tests/
+    #     robot -v BROWSER:chrome --variable HEADLESS:True tests/
 
-         mkdir -p results
+    #      mkdir -p results
 
-         robot -v BROWSER:chrome --variable HEADLESS:True PythonProject/Selenium/Test/
+    #      robot -v BROWSER:chrome --variable HEADLESS:True PythonProject/Selenium/Test/
 
  
+    # - name: Upload Robot Framework Report
+
+    #   uses: actions/upload-artifact@v4
+
+    #   with:
+
+    #         name: robot-reports
+
+    #         path: results/
+    - name: Run Robot Framework tests
+      run: |
+            mkdir -p results
+            robot -v BROWSER:chrome --variable HEADLESS:True PythonProject/Selenium/Test/ --outputdir results
+
     - name: Upload Robot Framework Report
-
       uses: actions/upload-artifact@v4
-
       with:
-
-            name: robot-reports
-
-            path: results/
+           name: robot-reports
+           path: results/
 
  
