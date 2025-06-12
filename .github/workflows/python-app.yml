@@ -78,7 +78,8 @@ jobs:
 
          mkdir -p results
 
-         robot -v BROWSER:chrome --variable HEADLESS:True JuneRobotFrameworkEG/Selenium/Selenium/Test/
+         robot -v BROWSER:chrome --variable HEADLESS:True PythonProject/Selenium/Test/
+
  
     - name: Upload Robot Framework Report
 
